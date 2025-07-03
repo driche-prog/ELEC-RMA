@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – ELEC'RMA</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font : Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icônes Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Police globale + animation éclair -->
+    <style>
+      body {
+        font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.7;
+        }
+      }
+
+      .animate-pulse-bolt {
+        color: #fbbf24;
+        display: inline-block;
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 leading-relaxed">
+    <!-- Barre de navigation -->
+    <header
+      class="bg-gradient-to-b from-blue-900 to-blue-600 shadow-md sticky top-0 z-10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center text-white"
+      >
+        <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl">ELEC'RMA</h1>
+        <nav>
+          <ul
+            class="flex flex-wrap gap-4 font-semibold text-base md:text-lg lg:text-xl"
+          >
+            <li><a href="index.html" class="hover:underline">Accueil</a></li>
+            <li><a href="services.html" class="hover:underline">Services</a></li>
+            <li>
+              <a href="disponibilites.html" class="hover:underline"
+                >Disponibilités</a
+              >
+            </li>
+            <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            <li><a href="a-propos.html" class="hover:underline">À&nbsp;propos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Contact -->
+    <main class="max-w-full sm:max-w-5xl mx-auto my-16 px-4 sm:px-6">
+      <section class="text-center space-y-8">
+        <!-- Titre avec icône pulsant -->
+        <div
+          class="max-w-xl mx-auto bg-blue-50 border-2 border-blue-800 rounded-2xl p-8 shadow flex justify-center items-center gap-3"
+        >
+          <span
+            class="animate-pulse-bolt text-5xl"
+            role="img"
+            aria-label="icône de contact qui pulse"
+          >
+            <i class="fas fa-envelope"></i>
+          </span>
+          <h2 class="text-3xl font-bold text-blue-800">Nous contacter</h2>
+        </div>
+
+        <p class="text-lg max-w-3xl mx-auto">
+          Pour toute demande de devis, de dépannage ou de renseignements,
+          contactez ELEC'RMA par téléphone, par mail ou en remplissant le
+          formulaire ci-dessous. Nous vous répondrons dans les meilleurs délais.
+        </p>
+
+        <!-- Contenu divisé en deux colonnes -->
+        <div class="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
+          <!-- Colonne gauche : par mail (formulaire) -->
+          <div class="md:w-1/2 bg-white rounded-2xl shadow p-8 text-left">
+            <h3 class="text-xl font-semibold mb-6 text-blue-800">Par mail</h3>
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block font-semibold mb-2"
+                  >Nom :</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block font-semibold mb-2"
+                  >Email :</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+
+              <div>
+                <label
+                  for="objet"
+                  class="block font-semibold mb-2"
+                  >Objet :</label
+                >
+                <input
+                  type="objet"
+                  id="objet"
+                  name="objet"
+                  required
+                  class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+
+
+              <div>
+                <label
+                  for="message"
+                  class="block font-semibold mb-2"
+                  >Message :</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-blue-700 text-white font-semibold px-6 py-2 rounded hover:bg-blue-800 transition"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+
+          <!-- Colonne droite : par téléphone -->
+          <div class="md:w-1/2 bg-white rounded-2xl shadow p-8 text-left flex flex-col justify-center">
+            <h3 class="text-xl font-semibold mb-6 text-blue-800">Par téléphone</h3>
+            <p class="text-lg mb-4">
+              Vous pouvez également nous joindre par téléphone au numéro ci-dessous.
+            </p>
+            <p class="text-2xl font-bold text-blue-800">
+              <i class="fas fa-phone-alt mr-2"></i> +33&nbsp;6&nbsp;85&nbsp;34&nbsp;04&nbsp;49
+            </p>
+            <p class="mt-6 text-gray-600">
+              Du lundi au vendredi de 7h à 19h.<br />
+              Le samedi 24h/24.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-white text-center py-6 text-sm text-gray-500">
+      &copy;&nbsp;2025&nbsp;ELEC'RMA – Tous droits réservés<br />
+      Contact&nbsp;:
+      <a href="tel:+33685340449">+33&nbsp;6&nbsp;85&nbsp;34&nbsp;04&nbsp;49</a>
+      |
+      <a href="mailto:elecrma25@yahoo.com">elecrma25@yahoo.com</a>
+    </footer>
+  </body>
+</html>

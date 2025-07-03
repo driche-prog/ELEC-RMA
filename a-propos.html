@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos – ELEC'RMA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    body { font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif; }
+    #map { height: 400px; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 leading-relaxed">
+  <header class="bg-gradient-to-b from-blue-900 to-blue-600 shadow-md sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center text-white">
+      <h1 class="font-extrabold text-3xl md:text-4xl lg:text-5xl">ELEC'RMA</h1>
+      <nav>
+        <ul class="flex flex-wrap gap-4 font-semibold text-base md:text-lg lg:text-xl">
+          <li><a href="index.html" class="hover:underline">Accueil</a></li>
+          <li><a href="services.html" class="hover:underline">Services</a></li>
+          <li><a href="disponibilites.html" class="hover:underline">Disponibilités</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+          <li><a href="a-propos.html" class="hover:underline">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-full sm:max-w-6xl mx-auto my-16 px-4 sm:px-6">
+    <section class="grid gap-10 md:grid-cols-2">
+      <div id="map" class="w-full rounded-2xl shadow-lg border-2 border-blue-800"></div>
+      <article class="space-y-8">
+        <h2 class="text-3xl font-bold text-blue-800">Qui sommes-nous ?</h2>
+        <p><strong>ELEC'RMA</strong>, fondée par Rabah DEBA en 2024, bénéficie de plus de 20 ans d'expérience dans l'installation, la mise aux normes et le dépannage électrique. Nous plaçons la proximité et la réactivité au cœur de nos valeurs.</p>
+        <h2 class="text-3xl font-bold text-blue-800">Notre mission</h2>
+        <p>Vous garantir des prestations électriques fiables, sécurisées et conformes, en neuf, rénovation ou urgence, avec sérieux et professionnalisme à chaque intervention.</p>
+        <h2 class="text-3xl font-bold text-blue-800">Pourquoi nous choisir ?</h2>
+        <p>Écoute, qualité, transparence et confiance sont nos priorités. ELEC'RMA simplifie votre quotidien tout en assurant votre sécurité, pour particuliers comme professionnels.</p>
+        <h2 class="text-3xl font-bold text-blue-800">Pour qui ?</h2>
+        <p>Propriétaires, locataires, artisans ou entreprises : pour des installations conformes, soignées et dans les délais, faites confiance à <strong>ELEC'RMA</strong>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center py-6 text-sm text-gray-500">
+    &copy; 2025 ELEC'RMA – Tous droits réservés<br />
+    Contact : <a href="tel:+33685340449">+33 6 85 34 04 49</a> | <a href="mailto:elecrma25@yahoo.com">elecrma25@yahoo.com</a>
+  </footer>
+
+  <script>
+    const map = L.map('map').setView([50.6292, 3.0573], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+  </script>
+</body>
+</html>
